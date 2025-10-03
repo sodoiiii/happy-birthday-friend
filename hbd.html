@@ -4,6 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Happy Birthday — เพื่อน</title>
+
+  <!-- แก้ตรงนี้ให้ตรงกับชื่อ repo -->
+  <base href="/hbd/">
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -145,7 +149,7 @@
 
     downloadBtn.addEventListener('click',()=>{
       const url = portraitImg.src;
-      if(!url || url==='your-drawing.jpg') return alert('ยังไม่ได้ตั้งค่ารูป');
+      if(!url) return alert('ยังไม่ได้ตั้งค่ารูป');
       const a=document.createElement('a');a.href=url;a.download='portrait.jpg';document.body.appendChild(a);a.click();a.remove();
     });
 
